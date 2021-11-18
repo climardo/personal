@@ -1,0 +1,33 @@
+---
+- name: Speaking of Bitcoin
+  apple: id1463398832
+  spotify: 2u3oXWilTSFmZ034vQeUGq
+  tags:
+  - bitcoin
+  - learn
+- name: The Breakdown with NLW
+  apple: id1414384043
+  spotify: 2jyIhkvAQhed8AWDZiPpSP
+  tags:
+  - bitcoin
+  - ethereum
+  - news
+- name: The Pomp Podcast
+  apple: id1434060078
+  spotify: 2QwpFjzJ0ZteqmMqw2xIfA
+  tags:
+  - bitcoin
+  - news
+- name: The Wolf Of All Streets
+  apple: id1500066831
+  spotify: 0QnvAOKX8ZUzdwMl89h3gU
+  tags:
+  - bitcoin
+  - ethereum
+  - news
+- name: What Bitcoin Did
+  apple: id1317356120
+  spotify: 0mWUJuONiilW5JSBBFZ0s7
+  tags:
+  - bitcoin
+  - news

@@ -1,3 +1,4 @@
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,22 +24,28 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#lists"><i class="fas fa-list"></i> Lists</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#links"><i class="fas fa-link"></i> Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#referrals"><i class="fas fa-user-circle"></i>
-                            Referrals</a></li>
+                    {% for nav in site.data.nav %}
+                    <li class="nav-item"><a class="nav-link" href="{{ nav.link }}"><i class="{{ nav.icon }}"></i> {{ nav.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Header-->
-    <header class="bg-primary bg-gradient text-white">
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Bitcoin <i class="fab fa-bitcoin"></i> and Etherem <i
+                class="fab fa-ethereum"></i> links from</div>
+            <div class="masthead-heading text-uppercase">Carlos Limardo</div>
+        </div>
+    </header>
+    <!-- <header class="bg-primary bg-gradient text-white">
         <div class="container px-4 text-center">
             <h1 class="fw-bolder">Carlos Limardo</h1>
             <p class="lead">My lists and links to Bitcoin <i class="fab fa-bitcoin"></i> and Etherem <i
                     class="fab fa-ethereum"></i> resources and services</p>
         </div>
-    </header>
+    </header> -->
     <!-- Lists section-->
     <section id="lists">
         <div class="container px-4">
@@ -67,66 +74,37 @@
                 <div class="col">
                     <h4><i class="fab fa-youtube"></i> YouTube</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.youtube.com/c/AlphaBetaSoupwithTXMC">Alpha Beta Soup with TXMC</a></li>
-                        <li><a href="https://www.youtube.com/c/AnthonyPompliano">Anthony Pompliano</a></li>
-                        <li><a href="https://www.youtube.com/c/Bankless">Bankless</a></li>
-                        <li><a href="https://www.youtube.com/channel/UC678LSROK47l__G-pMnOMgA">Blockware
-                                Intelligence</a></li>
-                        <li><a href="https://www.youtube.com/c/CoinBureau">Coin Bureau</a></li>
-                        <li><a href="https://www.youtube.com/c/glassnode">glassnode</a></li>
-                        <li><a href="https://www.youtube.com/c/NathanielWhittemoreCrypto">Nathaniel Whittemore</a></li>
-                        <li><a href="https://www.youtube.com/c/TheDailyGwei">The Daily Gwei</a></li>
+                        {% for channel in site.data.youtube %}
+                        <li><a href="{{ channel.link }}">{{ channel.name }}</a><br/>
+                            {% for tag in channel.tags %}
+                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            {% endfor %}
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col">
                     <h4><i class="fas fa-podcast"></i> Podcasts</h4>
                     <ul class="list-unstyled">
-                        <li>
-                            Speaking of Bitcoin
-                            <a href="https://podcasts.apple.com/us/podcast/lets-talk-bitcoin/id1463398832"><i
-                                    class="fas fa-podcast"></i></a>
-                            <a href="https://open.spotify.com/show/2u3oXWilTSFmZ034vQeUGq"><i
-                                    class="fab fa-spotify"></i></a>
+                        {% for podcast in site.data.podcasts %}
+                        <li class="pt-1">{{ podcast.name }} <a href="https://podcasts.apple.com/us/podcast/{{ podcast.apple }}"><i class="fas fa-podcast"></i></a>&nbsp;<a href="https://open.spotify.com/show/{{ podcast.spotify }}"><i class="fab fa-spotify"></i></a><br/>
+                            {% for tag in podcast.tags %}
+                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            {% endfor %}
                         </li>
-                        <li>
-                            The Breakdown With NLW
-                            <a href="https://podcasts.apple.com/us/podcast/id1414384043"><i
-                                    class="fas fa-podcast"></i></a>
-                            <a href="https://open.spotify.com/show/2jyIhkvAQhed8AWDZiPpSP"><i
-                                    class="fab fa-spotify"></i></a>
-                        </li>
-                        <li>
-                            The Pomp Podcast
-                            <a href="https://podcasts.apple.com/us/podcast/the-pomp-podcast/id1434060078"><i
-                                    class="fas fa-podcast"></i></a>
-                            <a href="https://open.spotify.com/show/2QwpFjzJ0ZteqmMqw2xIfA"><i
-                                    class="fab fa-spotify"></i></a>
-                        </li>
-                        <li>
-                            The Wolf Of All Streets
-                            <a href="https://podcasts.apple.com/us/podcast/the-wolf-of-all-streets/id1500066831"><i
-                                    class="fas fa-podcast"></i></a>
-                            <a href="https://open.spotify.com/show/0QnvAOKX8ZUzdwMl89h3gU"><i
-                                    class="fab fa-spotify"></i></a>
-                        </li>
-                        <li>
-                            What Bitcoin Did
-                            <a href="https://podcasts.apple.com/us/podcast/what-bitcoin-did/id1317356120"><i
-                                    class="fas fa-podcast"></i></a>
-                            <a href="https://open.spotify.com/show/0mWUJuONiilW5JSBBFZ0s7"><i
-                                    class="fab fa-spotify"></i></a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col">
                     <h4><i class="fas fa-globe"></i> Web</h4>
                     <ul class="list-unstyled">
-                        <li><a href="https://academy.binance.com/en">Binance Academy</a></li>
-                        <li><a href="https://bitcoinmagazine.com/">Bitcoin Magazine</a></li>
-                        <li><a href="https://coindesk.com/">CoinDesk</a></li>
-                        <li><a href="https://cointelegraph.com/">Cointelegraph</a></li>
-                        <li><a href="https://academy.glassnode.com/">Glassnode Academy</a></li>
-                        <li><a href="https://ultrasound.money/">ultrasound.money</a></li>
+                        {% for link in site.data.web-links %}
+                        <li><a href="{{ link.link }}">{{ link.name }}</a><br/>
+                            {% for tag in link.tags %}
+                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            {% endfor %}
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
@@ -136,41 +114,22 @@
     <!-- Referrals section-->
     <section id="referrals">
         <div class="container px-4">
-            <h2><i class="fas fa-user-circle"></i> Referrals</h2>
+            <h2><i class="fas fa-share-square"></i> Referrals</h2>
             <div class="row gx-4 justify-content-center">
-                <div class="col">
+                {% for referral in site.data.referrals %}
+                <div class="col-md-6">
                     <div class="card mb-3">
-                        <img src="assets/images/cashapp.svg" class="card-img-top img-fluid" alt="Cash App">
+                        <img src="{{ referral.img-src }}" class="card-img-top {{ referral.img-class }}" alt="{{ referral.name }}">
                         <div class="card-body">
-                            <h5 class="card-title">Cash App</h5>
-                            <p class="card-text fst-italic">The easiest way to send, spend, bank, and invest.
-                            <p class="card-text">I like it for the simplicity, privacy and low fees when buying Bitcoin.</p>
-                            <p class="card-text"><a href="https://cash.app/app/PFJDGHN">Sign up</a> • <a href="https://cash.app/help/us/en-us/3124-cash-refer-friends#">Help</a> • <a href="https://cash.app/$climardo">cashapp.com/$climardo</a></p>
+                            <h5 class="card-title">{{ referral.name }}</h5>
+                            <p class="card-text fst-italic">{{ referral.slogan }}</p>
+                            <p class="card-text">{{ referral.desc }}</p>
+                            <p class="card-text"><a href="{{ referral.sign-up }}">Sign up</a> • <a href="{{ referral.help }}">Help</a>{% if referral.me%} • <a href="https://{{ referral.me }}">{{ referral.me }}</a>{% endif %}</p>
+                            <p>{% for tag in referral.tags %}<span class="badge rounded-pill bg-secondary">{{ tag }}</span> {% endfor %}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card mb-3">
-                        <img src="assets/images/coinbase.svg" class="card-img-top img-fluid p-3" alt="Coinbase">
-                        <div class="card-body">
-                            <h5 class="card-title">Coinbase</h5>
-                            <p class="card-text fst-italic">The future of money is here | Over 73 million people and businesses trust us to buy, sell, and manage crypto.</p>
-                            <p class="card-text">I wouldn't recommend buying on Coinbase, but <a href="https://pro.coinbase.com">Coinbase Pro</a> (same credentials, different app and site) let's you do limit, market and stop orders with <a href="https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees">low fees</a>. Sign up with the referral link, verify yourself and hop over to Coinbase Pro to start buying BTC and ETH.</p>
-                            <p class="card-text"><a href="https://coinbase.com/join/limard_5?src=ios-link">Sign up</a> • <a href="https://help.coinbase.com/en/coinbase/getting-started/crypto-education/coinbase-earn-faq-and-terms">Help</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mb-3">
-                        <img src="assets/images/strike.svg" class="card-img-top bg-dark img-fluid p-3" alt="Strike">
-                        <div class="card-body">
-                            <h5 class="card-title">Strike</h5>
-                            <p class="card-text fst-italic">Send and receive money instantly. Buy bitcoin. Get paid in bitcoin.</p>
-                            <p class="card-text">There are basically no fees to buy Bitcoin and "Pay Me in Bitcoin" feature lets you receive direct deposit, ie your paycheck, in Bitcoin.</p>
-                            <p class="card-text"><a href="https://cash.app/app/PFJDGHN">Sign up</a> • <a href="https://strike.me/en/faq">Help</a> • <a href="https://strike.me/geru">strike.me/geru</a></p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -178,6 +137,7 @@
     <footer class="py-5 bg-dark">
         <div class="container px-4">
             <p class="m-0 text-center text-white">Copyright &copy; carloslimardo.com 2021</p>
+            <p class="m-0 text-center text-white"><small class="text-muted">Disclaimer: All opinions and views expressed here are my own and do not reflect those of my employer. None of the material found here is financial advice. Do your own research.</small></p>
         </div>
     </footer>
     <!-- CSS only -->

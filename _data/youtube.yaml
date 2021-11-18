@@ -1,0 +1,46 @@
+---
+- name: Alpha Beta Soup with TXMC
+  link: https://www.youtube.com/c/AlphaBetaSoupwithTXMC
+  tags:
+  - analysis
+  - bitcoin
+- name: Anthony Pompliano
+  link: https://www.youtube.com/c/AnthonyPompliano
+  tags:
+  - bitcoin
+  - news
+- name: Bankless
+  link: https://www.youtube.com/c/Bankless
+  tags:
+  - bitcoin
+  - ethereum
+  - news
+- name: Blockware Intelligence
+  link: https://www.youtube.com/channel/UC678LSROK47l__G-pMnOMgA
+  tags:
+  - analysis
+  - bitcoin
+  - news
+- name: Coin Bureau
+  link: https://www.youtube.com/c/CoinBureau
+  tags:
+  - bitcoin
+  - ethereum
+  - learn
+  - news
+- name: glassnode
+  link: https://www.youtube.com/c/glassnode
+  tags:
+  - analysis
+  - bitcoin
+- name: Nathaniel Whittemore
+  link: https://www.youtube.com/c/NathanielWhittemoreCrypto
+  tags:
+  - bitcoin
+  - ethereum
+  - news
+- name: The Daily Gwei
+  link: https://www.youtube.com/c/TheDailyGwei
+  tags:
+  - ethereum
+  - news

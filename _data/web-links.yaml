@@ -1,0 +1,62 @@
+---
+- name: Binance Academy
+  link: https://academy.binance.com/en
+  tags:
+  - learn
+  - bitcoin
+  - ethereum
+- name: Bitcoin Magazine
+  link: https://bitcoinmagazine.com/
+  tags:
+  - news
+  - bitcoin
+- name: CoinDesk
+  link: https://coindesk.com/
+  tags:
+  - news
+  - bitcoin
+  - ethereum
+- name: Cointelegraph
+  link: https://cointelegraph.com/
+  tags:
+  - news
+  - bitcoin
+  - ethereum
+- name: Glassnode Academy
+  link: https://academy.glassnode.com/
+  tags:
+  - learn
+  - analysis
+  - bitcoin
+  - ethereum
+- name: ultrasound.money
+  link: https://ultrasound.money/
+  tags:
+  - tools
+  - ethereum
+- name: Bitcoin for Individuals
+  link: https://bitcoin.org/en/bitcoin-for-individuals
+  tags:
+  - learn
+  - official
+  - bitcoin
+- name: Bitcoin Improvement Proposals
+  link: https://github.com/bitcoin/bips
+  tags:
+  - learn
+  - dev
+  - official
+  - bitcoin
+- name: Ethereum Improvement Proposals
+  link: https://eips.ethereum.org/
+  tags:
+  - learn
+  - dev
+  - official
+  - ethereum
+- name: What is Ethereum?
+  link: https://ethereum.org/en/what-is-ethereum/
+  tags:
+  - learn
+  - official
+  - ethereum
