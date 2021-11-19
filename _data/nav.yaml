@@ -1,7 +1,4 @@
 ---
-- name: Lists
-  icon: fas fa-list
-  link: '#lists'
 - name: Links
   icon: fas fa-link
   link: '#links'

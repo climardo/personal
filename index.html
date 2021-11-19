@@ -18,14 +18,15 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container px-4">
-            <a class="navbar-brand" href="#page-top">Carlos Limardo</a>
+            <a class="navbar-brand fw-bold" href="#page-top">Carlos Limardo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     {% for nav in site.data.nav %}
-                    <li class="nav-item"><a class="nav-link" href="{{ nav.link }}"><i class="{{ nav.icon }}"></i> {{ nav.name }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ nav.link }}"><i class="{{ nav.icon }}"></i> {{
+                            nav.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -34,74 +35,64 @@
     <!-- Header-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-subheading">Bitcoin <i class="fab fa-bitcoin"></i> and Etherem <i
-                class="fab fa-ethereum"></i> links from</div>
+            <div class="masthead-subheading">Bitcoin <i class="fab fa-bitcoin"></i> and Etherem <i class="fab fa-ethereum"></i> links from</div>
             <div class="masthead-heading text-uppercase">Carlos Limardo</div>
         </div>
+        <small class="text-muted">(still working on it)</small>
     </header>
-    <!-- <header class="bg-primary bg-gradient text-white">
-        <div class="container px-4 text-center">
-            <h1 class="fw-bolder">Carlos Limardo</h1>
-            <p class="lead">My lists and links to Bitcoin <i class="fab fa-bitcoin"></i> and Etherem <i
-                    class="fab fa-ethereum"></i> resources and services</p>
-        </div>
-    </header> -->
-    <!-- Lists section-->
-    <section id="lists">
+    <!-- Options -->
+    <section id="options">
         <div class="container px-4">
-            <h2><i class="fas fa-list"></i> Lists</h2>
-            <div class="row gx-4 justify-content-center">
-                <div class="col">
-                    <a class="twitter-timeline" data-height="600" data-dnt="true" data-theme="dark"
-                        href="https://twitter.com/carloslimardo/lists/1424356680041701376?ref_src=twsrc%5Etfw">A Twitter
-                        List by carloslimardo</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div class="col">
-                    <a class="twitter-timeline" data-height="600" data-dnt="true" data-theme="dark"
-                        href="https://twitter.com/carloslimardo/lists/1446675178906431495?ref_src=twsrc%5Etfw">A Twitter
-                        List by carloslimardo</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+            {% for option in site.data.options %}
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="{{ option }}" value="{{ option }}" checked>
+                <label class="form-check-label" for="{{ option }}">{{ option }}</label>
             </div>
+            {% endfor %}
         </div>
     </section>
     <!-- Links section-->
     <section class="bg-light" id="links">
         <div class="container px-4">
             <h2><i class="fas fa-link"></i> Links</h2>
-            <div class="row gx-4 justify-content-center">
-                <div class="col">
+            <div class="row gx-4">
+                <div class="col-md-6">
                     <h4><i class="fab fa-youtube"></i> YouTube</h4>
                     <ul class="list-unstyled">
                         {% for channel in site.data.youtube %}
-                        <li><a href="{{ channel.link }}">{{ channel.name }}</a><br/>
+                        <li class="{% for tag in channel.tags %}{{ tag }} {% endfor %}"><a href="{{ channel.link }}">{{
+                                channel.name }}</a><br />
                             {% for tag in channel.tags %}
-                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
                             {% endfor %}
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                     <h4><i class="fas fa-podcast"></i> Podcasts</h4>
                     <ul class="list-unstyled">
                         {% for podcast in site.data.podcasts %}
-                        <li class="pt-1">{{ podcast.name }} <a href="https://podcasts.apple.com/us/podcast/{{ podcast.apple }}"><i class="fas fa-podcast"></i></a>&nbsp;<a href="https://open.spotify.com/show/{{ podcast.spotify }}"><i class="fab fa-spotify"></i></a><br/>
+                        <li class="pt-1 {% for tag in podcast.tags %}{{ tag }} {% endfor %}">{{ podcast.name }} <a
+                                href="https://podcasts.apple.com/us/podcast/{{ podcast.apple }}"><i
+                                    class="fas fa-podcast"></i></a>&nbsp;<a
+                                href="https://open.spotify.com/show/{{ podcast.spotify }}"><i
+                                    class="fab fa-spotify"></i></a><br />
                             {% for tag in podcast.tags %}
-                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
                             {% endfor %}
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                     <h4><i class="fas fa-globe"></i> Web</h4>
                     <ul class="list-unstyled">
                         {% for link in site.data.web-links %}
-                        <li><a href="{{ link.link }}">{{ link.name }}</a><br/>
+                        <li class="{% for tag in link.tags %}{{ tag }} {% endfor %}"><a href="{{ link.link }}">{{
+                                link.name }}</a><br />
                             {% for tag in link.tags %}
-                        <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
                             {% endfor %}
                         </li>
                         {% endfor %}
@@ -119,13 +110,17 @@
                 {% for referral in site.data.referrals %}
                 <div class="col-md-6">
                     <div class="card mb-3">
-                        <img src="{{ referral.img-src }}" class="card-img-top {{ referral.img-class }}" alt="{{ referral.name }}">
+                        <img src="{{ referral.img-src }}" class="card-img-top {{ referral.img-class }}"
+                            alt="{{ referral.name }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ referral.name }}</h5>
                             <p class="card-text fst-italic">{{ referral.slogan }}</p>
                             <p class="card-text">{{ referral.desc }}</p>
-                            <p class="card-text"><a href="{{ referral.sign-up }}">Sign up</a> • <a href="{{ referral.help }}">Help</a>{% if referral.me%} • <a href="https://{{ referral.me }}">{{ referral.me }}</a>{% endif %}</p>
-                            <p>{% for tag in referral.tags %}<span class="badge rounded-pill bg-secondary">{{ tag }}</span> {% endfor %}</p>
+                            <p class="card-text"><a href="{{ referral.sign-up }}">Sign up</a> • <a
+                                    href="{{ referral.help }}">Help</a>{% if referral.me%} • <a
+                                    href="https://{{ referral.me }}">{{ referral.me }}</a>{% endif %}</p>
+                            <p>{% for tag in referral.tags %}<span class="badge rounded-pill bg-secondary">{{ tag
+                                    }}</span> {% endfor %}</p>
                         </div>
                     </div>
                 </div>
@@ -137,14 +132,16 @@
     <footer class="py-5 bg-dark">
         <div class="container px-4">
             <p class="m-0 text-center text-white">Copyright &copy; carloslimardo.com 2021</p>
-            <p class="m-0 text-center text-white"><small class="text-muted">Disclaimer: All opinions and views expressed here are my own and do not reflect those of my employer. None of the material found here is financial advice. Do your own research.</small></p>
+            <p class="m-0 text-center text-white"><small class="text-muted">Disclaimer: All opinions and views expressed
+                    here are my own and do not reflect those of my employer. None of the material found here is
+                    financial advice. Do your own research.</small></p>
         </div>
     </footer>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
 </body>
 
 </html>
