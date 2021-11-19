@@ -26,7 +26,18 @@
   img-src: assets/images/strike.svg
   img-class: bg-dark p-3
   slogan: Send and receive money instantly. Buy bitcoin. Get paid in bitcoin.
-  desc: There are basically no fees to buy Bitcoin and the "Pay Me in Bitcoin" feature lets you receive direct deposits, ie your paycheck, in Bitcoin 
+  desc: There are basically no fees to buy Bitcoin and the "Pay Me in Bitcoin" feature lets you receive direct deposits, ie your paycheck, in Bitcoin.
   me: strike.me/geru
   tags:
   - bitcoin
+- name: BlockFi
+  sign-up: https://blockfi.com/?ref=a7a7bded
+  help: https://blockfi.com/credit-card/
+  img-src: assets/images/blockfi.svg
+  img-class: p-5
+  slogan: BlockFi is the easiest place to buy, sell and earn cryptocurrency. Sign up and start earning today.
+  desc: I use the BlockFi Visa Rewards card to earn sats on every purchase. Click the Help link for more info about that.
+  me:
+  tags:
+  - bitcoin
+  - ethereum
