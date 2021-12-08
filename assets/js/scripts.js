@@ -32,10 +32,9 @@ function addOrRemove(array, value) {
 
 // A function to shows/hide elements based on the state of matching checkboxValues
 function applyOptions() {
-    let uncheckedOptions = [] // Initialize array
-    let checkedOptions = [] // Initialize array
+    let uncheckedOptions = [], checkedOptions = [] // Initialize array
 
-    // Add unchecked options to the array
+    // Add checked and unchecked options to the each array
     for (let i = 0; i < options.length; i++) {
         if (options[i].checked == true) {
             addOrRemove(checkedOptions, options[i].value)
@@ -55,8 +54,10 @@ function applyOptions() {
     // Show checked options by removing d-none class
     for (let i = 0; i < checkedOptions.length; i++) {
         let checked = checkedOptions[i]
-        for (let j = 0; j < allItems[checked].length; j++) {
-            allItems[checked][j].classList.remove("d-none")
-        }
+        // if (["bitcoin", "ethereum"].includes(checkedOptions[i])) {
+            for (let j = 0; j < allItems[checked].length; j++) {
+                allItems[checked][j].classList.remove("d-none")
+            }
+        // }
     }
 }
