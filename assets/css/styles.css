@@ -33,3 +33,16 @@ section {
   height: 30px;
   width: 30px;
 }
+
+.form-check-input:checked {
+  background-color: #f2a900;
+  border-color: #f2a900;
+}
+
+a:hover {
+  color: #f2a900;
+}
+
+a {
+  color: #e09c00;
+}

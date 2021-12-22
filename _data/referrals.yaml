@@ -8,18 +8,17 @@
   desc: I like it for the simplicity, privacy and relatively low fees when buying Bitcoin.
   me: cash.app/$climardo
   tags:
-  - bitcoin
+  - referral
 - name: Coinbase
   sign-up: https://coinbase.com/join/limard_5
   help: https://help.coinbase.com/en/coinbase/getting-started/crypto-education/coinbase-earn-faq-and-terms
   img-src: assets/images/coinbase.svg
   img-class: p-3
   slogan: The future of money is here | Over 73 million people and businesses trust us to buy, sell, and manage crypto.
-  desc:  I wouldn't recommend buying on Coinbase, but <a href="https://pro.coinbase.com">Coinbase Pro</a> (same credentials, different app and site) let's you do limit, market and stop orders with <a href="https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees">low fees</a>. Sign up with the referral link, verify yourself and hop over to Coinbase Pro to start buying BTC and ETH.
+  desc:  I wouldn't recommend buying on Coinbase, but <a href="https://pro.coinbase.com">Coinbase Pro</a> (same credentials, different app and site) let's you do limit, market and stop orders with <a href="https://help.coinbase.com/en/pro/trading-and-funding/trading-rules-and-fees/fees">low fees</a>. Sign up with the referral link, verify yourself and hop over to Coinbase Pro to start buying BTC.
   me: 
   tags:
-  - bitcoin
-  - ethereum
+  - referral
 - name: Strike
   sign-up: https://cash.app/app/PFJDGHN
   help: https://strike.me/en/faq
@@ -29,7 +28,7 @@
   desc: There are basically no fees to buy Bitcoin and the "Pay Me in Bitcoin" feature lets you receive direct deposits, ie your paycheck, in Bitcoin.
   me: strike.me/geru
   tags:
-  - bitcoin
+  - referral
 - name: BlockFi
   sign-up: https://blockfi.com/?ref=a7a7bded
   help: https://blockfi.com/credit-card/
@@ -39,5 +38,4 @@
   desc: I use the BlockFi Visa Rewards card to earn sats on every purchase. Click the Help link for more info about that.
   me:
   tags:
-  - bitcoin
-  - ethereum
+  - referral

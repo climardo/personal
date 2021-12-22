@@ -54,10 +54,8 @@ function applyOptions() {
     // Show checked options by removing d-none class
     for (let i = 0; i < checkedOptions.length; i++) {
         let checked = checkedOptions[i]
-        // if (["bitcoin", "ethereum"].includes(checkedOptions[i])) {
-            for (let j = 0; j < allItems[checked].length; j++) {
-                allItems[checked][j].classList.remove("d-none")
-            }
-        // }
+        for (let j = 0; j < allItems[checked].length; j++) {
+            allItems[checked][j].classList.remove("d-none")
+        }
     }
 }
