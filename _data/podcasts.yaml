@@ -1,4 +1,10 @@
 ---
+- name: Citadel Dispatch
+  apple: id1546393840
+  spotify: 2KmZgeZUC1trxOvDvfQefy
+  tags:
+  - learn
+  - news
 - name: Speaking of Bitcoin
   apple: id1463398832
   spotify: 2u3oXWilTSFmZ034vQeUGq

@@ -1,0 +1,18 @@
+---
+- name: Mastering Bitcoin
+  link: https://bitcoinbook.info/
+  github: https://github.com/bitcoinbook/bitcoinbook
+  tags:
+  - dev
+  - learn
+- name: Mastering the Lightning Network
+  link: https://lnbook.info/
+  github: https://github.com/lnbook/lnbook
+  tags:
+  - dev
+  - learn
+- name: "The Price of Tomorrow: Why Deflation is the Key to an Abundant Future"
+  link: https://www.amazon.com/dp/B08334WFSQ/
+  tags: 
+  - learn
+  - macro
