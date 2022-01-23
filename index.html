@@ -60,10 +60,10 @@ title: Bitcoin links from Carlos Limardo
         </div>
     </header>
 
-    <!-- Options -->
-    <section id="options">
+    <!-- Tags -->
+    <section id="tags">
         <div class="container px-4">
-            {% for option in site.data.options %}
+            {% for option in site.data.tags %}
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="{{ option }}-check" value="{{ option }}" checked>
                 <label class="form-check-label" for="{{ option }}">{{ option }}</label>
@@ -127,6 +127,21 @@ title: Bitcoin links from Carlos Limardo
                         {% if link.github %}<a
                         href="{{ link.github }}"><i
                             class="fab fa-github"></i></a> {% endif %}<br />
+                            {% for tag in link.tags %}
+                            <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
+                            {% endfor %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fab fa-github"></i> Github</h4>
+                    <ul class="list-unstyled">
+                        {% for link in site.data.github %}
+                        <li class="{% for tag in link.tags %}{{ tag }} {% endfor %}"><a href="{{ link.link }}">{{link.name }}</a>
+                        {% if link.homepage %}<a
+                        href="{{ link.homepage }}"><i
+                            class="fas fa-globe"></i></a> {% endif %}<br />
                             {% for tag in link.tags %}
                             <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
                             {% endfor %}

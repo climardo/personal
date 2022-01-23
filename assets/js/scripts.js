@@ -1,14 +1,14 @@
-// Used in applyOptions() to determine which checkboxes are checked
-let options = document.getElementsByClassName("form-check-input")
+// Used in showTags() to determine which checkboxes are checked
+let tags = document.getElementsByClassName("form-check-input")
 
 // Set value 
 let checkboxValues = []
-for (let i = 0; i < options.length; i++) {
-    // Watch to the checkboxes and call applyOptions() when detected
-    options[i].addEventListener('change', applyOptions)
+for (let i = 0; i < tags.length; i++) {
+    // Watch to the checkboxes and call showTags() when detected
+    tags[i].addEventListener('change', showTags)
 
     // Add text values of each option to array checkboxValues
-    checkboxValues[i] = options[i].value
+    checkboxValues[i] = tags[i].value
 }
 
 // Array containing all items on the page organized by tags in the next for() statement.
@@ -31,19 +31,19 @@ function addOrRemove(array, value) {
 }
 
 // A function to shows/hide elements based on the state of matching checkboxValues
-function applyOptions() {
+function showTags() {
     let uncheckedOptions = [], checkedOptions = [] // Initialize array
 
-    // Add checked and unchecked options to the each array
-    for (let i = 0; i < options.length; i++) {
-        if (options[i].checked == true) {
-            addOrRemove(checkedOptions, options[i].value)
+    // Add checked and unchecked tags to the each array
+    for (let i = 0; i < tags.length; i++) {
+        if (tags[i].checked == true) {
+            addOrRemove(checkedOptions, tags[i].value)
         } else {
-            addOrRemove(uncheckedOptions, options[i].value)
+            addOrRemove(uncheckedOptions, tags[i].value)
         }
     }
 
-    // Hide unchecked options by adding d-none class
+    // Hide unchecked tags by adding d-none class
     for (let i = 0; i < uncheckedOptions.length; i++) {
         let unchecked = uncheckedOptions[i]
         for (let j = 0; j < allItems[unchecked].length; j++) {
@@ -51,7 +51,7 @@ function applyOptions() {
         }
     }
 
-    // Show checked options by removing d-none class
+    // Show checked tags by removing d-none class
     for (let i = 0; i < checkedOptions.length; i++) {
         let checked = checkedOptions[i]
         for (let j = 0; j < allItems[checked].length; j++) {
