@@ -1,23 +1,19 @@
 ---
-- name: Binance Academy
-  link: https://academy.binance.com/en
+- name: Bitcoin Information & Resources
+  link: https://www.lopp.net/bitcoin-information.html
   tags:
   - learn
-- name: Bitcoin for Individuals
-  link: https://bitcoin.org/en/bitcoin-for-individuals
-  tags:
-  - learn
-  - official
+  - tools
 - name: Bitcoin Improvement Proposals
   link: https://github.com/bitcoin/bips
   tags:
   - dev
   - learn
-  - official
 - name: Bitcoin Magazine
   link: https://bitcoinmagazine.com/
   tags:
   - news
+  - mining
 - name: CoinDesk
   link: https://coindesk.com/
   tags:
@@ -35,3 +31,16 @@
   tags:
   - analysis
   - learn
+- name: Hello Bitcoin
+  link: https://hellobitco.in/
+  tags:
+  - learn
+- name: mempool
+  link: https://mempool.space
+  tags:
+  - tools
+- name: Spiral
+  link: https://spiral.xyz
+  tags:
+  - dev
+  - lightning

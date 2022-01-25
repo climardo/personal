@@ -3,31 +3,31 @@
   link: https://github.com/bitcoin
   homepage: https://bitcoincore.org/
   tags:
-    - dev
-    - github
+  - dev
+  - github
 - name: Bitcoin Dev Kit/BDK
   link: https://github.com/bitcoindevkit/bdk
   homepage: https://bitcoindevkit.org/
   tags:
-    - dev
-    - github
+  - dev
+  - github
 - name: Blockchain Commons, LLC/Learning Bitcoin from the Command Line
   link: https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line
   homepage: https://www.blockchaincommons.com/
   tags:
-    - dev
-    - github
+  - dev
+  - github
 - name: Lightning Dev Kit/Rust-Lightning
   link: https://github.com/lightningdevkit/rust-lightning
   homepage: https://lightningdevkit.org/
   tags:
-    - dev
-    - github
-    - lightning
+  - dev
+  - github
+  - lightning
 - name: Lightning Network Daemon
   link: https://github.com/lightningnetwork/lnd
   homepage: https://docs.lightning.engineering/
   tags:
-    - dev
-    - github
-    - lightning
+  - dev
+  - github
+  - lightning

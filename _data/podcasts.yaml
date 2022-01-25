@@ -10,14 +10,15 @@
   spotify: 2u3oXWilTSFmZ034vQeUGq
   tags:
   - learn
+- name: Tales from the Crypt
+  apple: id1292381204
+  spotify: 0Vd8E5vWnCfB4xucu87WNZ
+  tags:
+  - learn
+  - news
 - name: The Breakdown with NLW
   apple: id1414384043
   spotify: 2jyIhkvAQhed8AWDZiPpSP
-  tags:
-  - news
-- name: The Pomp Podcast
-  apple: id1434060078
-  spotify: 2QwpFjzJ0ZteqmMqw2xIfA
   tags:
   - news
 - name: The Wolf Of All Streets
