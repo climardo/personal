@@ -18,8 +18,16 @@
     - dev
     - github
 - name: Lightning Dev Kit/Rust-Lightning
-  link: https://github.com/lightningdevkit/
+  link: https://github.com/lightningdevkit/rust-lightning
   homepage: https://lightningdevkit.org/
   tags:
     - dev
     - github
+    - lightning
+- name: Lightning Network Daemon
+  link: https://github.com/lightningnetwork/lnd
+  homepage: https://docs.lightning.engineering/
+  tags:
+    - dev
+    - github
+    - lightning
