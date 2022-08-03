@@ -2,32 +2,38 @@
 - name: Citadel Dispatch
   apple: id1546393840
   spotify: 2KmZgeZUC1trxOvDvfQefy
+  rss: https://anchor.fm/s/45563e80/podcast/rss
   tags:
   - learn
   - news
 - name: Speaking of Bitcoin
   apple: id1463398832
   spotify: 2u3oXWilTSFmZ034vQeUGq
+  rss: https://anchor.fm/s/b421fd4/podcast/rss
   tags:
   - learn
-- name: Tales from the Crypt
-  apple: id1292381204
-  spotify: 0Vd8E5vWnCfB4xucu87WNZ
+- name: Rabbit Hole Recap
+  apple: id1622698349
+  spotify: 1GVfJ3VbvIBYFwNaETxxnr
+  rss: https://anchor.fm/s/91b8fbc8/podcast/rss
   tags:
   - learn
   - news
 - name: The Breakdown with NLW
   apple: id1438693620
   spotify: 538vuul1PuorUDwgkC8JWF
+  rss: https://nlwcrypto.libsyn.com/rss
   tags:
   - news
 - name: The Wolf Of All Streets
   apple: id1500066831
   spotify: 0QnvAOKX8ZUzdwMl89h3gU
+  rss: https://feeds.megaphone.fm/wolfofallstreets
   tags:
   - news
 - name: What Bitcoin Did
   apple: id1317356120
   spotify: 0mWUJuONiilW5JSBBFZ0s7
+  rss: https://www.whatbitcoindid.com/podcast?format=rss
   tags:
   - news

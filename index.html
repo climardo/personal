@@ -98,7 +98,9 @@ title: Bitcoin links from Carlos Limardo
                                 href="https://podcasts.apple.com/us/podcast/{{ podcast.apple }}"><i
                                     class="fas fa-podcast"></i></a>&nbsp;<a
                                 href="https://open.spotify.com/show/{{ podcast.spotify }}"><i
-                                    class="fab fa-spotify"></i></a><br />
+                                    class="fab fa-spotify"></i></a><br />&nbsp;<a
+                                    href="\{{ podcast.rss }}"><i
+                                        class="fab fa-rss"></i></a><br />
                             {% for tag in podcast.tags %}
                             <span class="badge rounded-pill bg-secondary">{{ tag }}</span>
                             {% endfor %}
